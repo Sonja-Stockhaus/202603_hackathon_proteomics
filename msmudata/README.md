@@ -28,6 +28,8 @@ The main extension of the data format to existing data containers like mudata wo
 
 We recommend contributors to make themselves familiar with the [mudata](https://mudata.readthedocs.io/stable/notebooks/nuances.html) documentation and API. 
 
+See also [QFeatures](https://rformassspectrometry.github.io/QFeatures/articles/QFeatures.html) for a conceptually similar R-package and [alphaquant](https://github.com/MannLabs/alphaquant.git) for a potential future application of the mapping approach.
+
 ## Example data 
 Use the download script to obtain example PSM reports. 
 
