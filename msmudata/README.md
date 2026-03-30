@@ -17,21 +17,23 @@ The key challenge is that there exists an N:M relationship between precursors an
 
 The main extension of the data format to existing data containers like mudata would be the formalization the relationship/mapping between the fundamental units of quantification in MS-proteomics (fragments, precursors) and high-level, biologically more relevant aggregated features (peptides, proteins, genes).
 
-- [ ] Implement an RFC (see [rfc/RFC.md](rfc/RFC.md)). 
-- [x] Implement the prototypes of the data structure that have been proposed in an scverse (i.e. anndata/mudata) compatible manner. See [`src/`](src/) and [`notebooks/demo_hierarchical_mudata.ipynb`](notebooks/demo_hierarchical_mudata.ipynb).
-- [x] **Application**: Implement a related, simple downstream analysis that builds on the data format to get an intuition for the API (e.g. “Plot the distribution of all precursor intensities that correspond to a specific protein”)
+- [x] Implement an RFC (see rfc/RFC.md).
+- [x] Implement the prototypes of the data structure that have been proposed in an scverse (i.e. anndata/mudata) compatible manner.
+- [ ] **Application**: Implement a related, simple downstream analysis that builds on the data format to get an intuition for the API (e.g. “Plot the distribution of all precursor intensities that correspond to a specific protein”)
 - [ ] **Data ingestion**: Implement one proof-of-principle reader from a quantification pipeline/search engine output (e.g. QuantMS, DIANN, alphadia) to the data container.
+- [ ] **Application**: Aggregate a low-level feature level (e.g. precursors) to a higher-level feature level (e.g. genes)
 
-## Support 
+## Support
 
 ## Get started
 
-We recommend contributors to make themselves familiar with the [mudata](https://mudata.readthedocs.io/stable/notebooks/nuances.html) documentation and API. 
+We recommend contributors to make themselves familiar with the [mudata](https://mudata.readthedocs.io/stable/notebooks/nuances.html) documentation and API.
 
 See also [QFeatures](https://rformassspectrometry.github.io/QFeatures/articles/QFeatures.html) for a conceptually similar R-package and [alphaquant](https://github.com/MannLabs/alphaquant.git) for a potential future application of the mapping approach.
 
-## Example data 
-Use the download script to obtain example PSM reports. 
+## Example data
+
+Use the download script to obtain example PSM reports.
 
 ```shell
 bash download.sh
@@ -39,7 +41,6 @@ bash download.sh
 # download real world data
 bash data/download.sh -o data/ albrecht2025
 
-# download a minimal dataset 
+# download a minimal dataset
 bash data/download.sh -o data/ minimal
 ```
-
