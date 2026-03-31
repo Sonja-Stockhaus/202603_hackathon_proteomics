@@ -51,7 +51,7 @@ Use the `mudata.varp` attribute to formalize the inherent tree structure of MS d
 
 Given a mdata object with a total number of features $p=p_0 + p_1 + ... + p_n$ from feature **levels** `0`, `1`, ..., `N` The `varp` attribute has the shape `p x p`
 
-A feature mapping in the `varp` attribute represents the _binary adjacency matrix_ of shape `p x p` of a a tree-like directed acylic graph that stores the mapping between features of the different levels. The indices of the adjacency matrix are aligned with `mdata.var_names`. A `1` in the the adjacency matrix at position `i, j` represents a connection between a feature `mdata.var_names[i]` and `mdata.var_names[j]`.
+A feature mapping in the `varp` attribute represents the _binary adjacency matrix_ of shape `p x p` of a a tree-like directed acyclic graph that stores the mapping between features of the different levels. The indices of the adjacency matrix are aligned with `mdata.var_names`. A `1` in the the adjacency matrix at position `i, j` represents a connection between a feature `mdata.var_names[i]` and `mdata.var_names[j]`.
 
 **Advantages** This approach naturally extends to any number of feature levels and `n:m` mappings. The support of sparse matrices in `mdata.varp` makes the storage of this feature mapping very efficient.
 
@@ -62,12 +62,12 @@ Pandas index extension - The provided approach could be further extended with a 
 
 ### Querying
 
-### Validation
+### Validation (Planned)
 
 In future extensions, the obtained graph could be validated. E.g. that mappings between feature-levels follow further constraints
 
 - `N:1`, `1:N` mapping
-- unidirectonality across feature levels
+- unidirectionality across feature levels
 - existence of unmapped features
 
 ### Storage
@@ -87,6 +87,13 @@ _Work in progress_
 For a parent node, plot the values of all child nodes.
 
 _Work in progress_
+
+### Interfacing with R
+
+The format should be interoperable with the [QFeatures](https://rformassspectrometry.github.io/QFeatures/articles/QFeatures.html) structure in R.
+
+- Use `anndataR` to build summarized experiments from the different modalities
+- Build a `FeatureMapping` structure from the existing adjaceny matrix.
 
 ## Future developments
 
