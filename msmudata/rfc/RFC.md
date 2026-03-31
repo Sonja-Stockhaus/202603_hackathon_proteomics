@@ -103,4 +103,4 @@ The format should be interoperable with the [QFeatures](https://rformassspectrom
 
 - [ ] **MuData core vs. extension**: Is this best implemented as a standalone package that wraps MuData, or should the mapping infrastructure be proposed for inclusion in MuData itself? The former is more pragmatic; the latter would enable tighter integration (e.g. mappings that auto-update when modalities are subsetted).
 
-- [ ] **Naming**
+- [ ] **Naming** of the new feature/container.
